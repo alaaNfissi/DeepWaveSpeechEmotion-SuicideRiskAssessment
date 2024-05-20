@@ -68,12 +68,12 @@
 <!-- ABSTRACT -->
 ## Abstract
 
-<p align="justify"> In the field of human-computer interaction and psychological assessment, speech emotion recognition (SER) plays an important role in deciphering emotional states from speech signals. Despite advancements, challenges persist due to system complexity, feature distinctiveness issues, and noise interference. This paper introduces a new end-to-end (E2E) deep learning multi-resolution framework for SER, addressing these limitations by extracting meaningful representations directly from raw waveform speech signals. By leveraging the properties of the fast discrete wavelet transform (FDWT), including the cascade algorithm, conjugate quadrature filter, and coefficient denoising, our approach introduces a learnable model for both wavelet bases and denoising through deep learning techniques. The framework incorporates an activation function for learnable asymmetric hard thresholding of wavelet coefficients. Our approach exploits the capabilities of wavelets for effective localization in both time and frequency domains. We then combine one-dimensional dilated convolutional neural networks (1D dilated CNN) with a spatial attention layer and bidirectional gated recurrent units (Bi-GRU) with a temporal attention layer to efficiently capture the nuanced spatial and temporal characteristics of emotional features. By handling variable-length speech without segmentation and eliminating the need for pre or post-processing, the proposed model outperformed state-of-the-art methods on IEMOCAP and EMO-DB datasets.</p>
+<p align="justify"> This study introduces an end-to-end (E2E) deep learning framework for speech emotion recognition (SER), aimed at enhancing the early detection of suicidal ideation and reducing suicide risks. Despite progress, SER still faces challenges like system complexity, feature distinctiveness, and noise interference. Our approach uses a learnable architecture for fast discrete wavelet transform (FDWT) multi-resolution analysis, directly extracting features from raw speech waveforms. It combines a 1D dilated convolutional neural network (1D dilated CNN) with spatial attention (SA) and bidirectional gated recurrent units (Bi-GRU) with temporal attention (TA) to capture spatial and temporal characteristics. The framework handles variable-length speech without segmentation, simplifying preprocessing. It introduces a learnable architecture for wavelet bases and coefficient denoising with a learnable asymmetric hard thresholding (LAHT) activation function, enhancing noise resilience and feature distinctiveness. We validate our model on the NSPL-CRISE dataset, which includes recordings from individuals with psychological challenges and potential suicidal thoughts. Our results show significant performance improvements over state-of-the-art SER methods, demonstrating the effectiveness of our multi-resolution deep learning framework in identifying emotional states related to suicide risk.</p>
 <div align="center">
   
 ![model-architecture][model-architecture]
   
-*L-LFDWTB SigWavNet General Architecture*
+*SigWavNet General Architecture*
   
 </div>
 
@@ -108,9 +108,9 @@ The data preprocessing used in this study is provided in the `Data_exploration` 
 You can download a copy of all the files in this repository by cloning the
 [git](https://git-scm.com/) repository:
 
-    git clone https://github.com/alaaNfissi/SigWavNet-Learning-Multiresolution-Signal-Wavelet-Network-for-Speech-Emotion-Recognition.git
+    git clone https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment.git
 
-or [download a zip archive](https://github.com/alaaNfissi/SigWavNet-Learning-Multiresolution-Signal-Wavelet-Network-for-Speech-Emotion-Recognition/archive/refs/heads/main.zip).
+or [download a zip archive](https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment/archive/refs/heads/main.zip).
 
 ### Dependencies
 
@@ -156,9 +156,8 @@ Install all required dependencies in it:
 
 <p align="justify">
 
-1. First, you need to download IEMOCAP and EMO-DB datasets:
+1. First, you need to download IEMOCAP dataset:
   * [IEMOCAP official website](https://sail.usc.edu/iemocap/)
-  * [EMO-DB official website](http://www.emodb.bilderbar.info/download/)
   
 2. To be able to explore the data you need to execute the Jupyter Notebook that prepares the `csv` files needed for the experiments.
 To do this, you must first start the notebook server by going into the
@@ -174,19 +173,27 @@ Each cell can be executed using `Shift + Enter`.
 Executing text cells does nothing and executing code cells runs the code and produces its output.
 To execute the whole notebook, run all cells in order.
 
-3. After generating the needed `csv` files `IEMOCAP_dataset.csv` and `EMO_DB_dataset.csv`, go to your terminal where the `ser-env` environment was
+3. After generating the needed `csv` file `IEMOCAP_dataset.csv`, go to your terminal where the `ser-env` environment was
   activated go to the project folder and run the python script `main.py` as follows:
 
 ```sh  
 python main.py
 ``` 
-  _You can do the same thing for the EMO-DB dataset by changing the dataset csv file to `EMO_DB_dataset.csv`._
 
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Results
+
+### On NSPL-CRISE dataset
+<p align="justify"> 
+The evaluation of SigWavNet on the NSPL-CRISE dataset provides a comprehensive analysis of its ability to distinguish between various emotional states, as demonstrated by its commendable precision, recall, and F1-score metrics for different emotions. The model accurately identifies 'Happy' emotions 73.68% of the time, demonstrating effective detection of positive cues. It performs well in recognizing 'Sad' with a 73.33% precision and detects 'Neutral' emotions with a 76.92% accuracy rate, indicating strength in handling both pronounced and subtle emotional states. The confusion matrix shows some misclassifications, such as 'Angry' being confused with 'Sad' or 'Neutral', but these occur at lower percentages, suggesting a good overall grasp of emotional nuances. The model's 61.36% accuracy in distinguishing 'FCW' while occasionally confusing it with 'Sad' highlights areas for potential refinement.</p>
+
+SigWavNet confusion matrix on NSPL-CRISE           | 
+:-----------------------------------------------------------------:|
+![sigwavnet_cfm_emodb](figures/nspl_crise_cfm_1.png)  |
+
 
 ### On IEMOCAP dataset
 <p align="justify"> 
@@ -197,15 +204,6 @@ SigWavNet confusion matrix on IEMOCAP            |
 :-----------------------------------------------------------------:|
 ![sigwavnet_cfm_iemocap](figures/iemocap_cfm.png)  |
 
-
-### On EMO-DB dataset
-<p align="justify"> 
-The evaluation of SigWavNet on the EMO-DB dataset provides a comprehensive analysis of its ability to distinguish between various emotional states, as demonstrated by its commendable precision, recall, and F1-score metrics for different emotions. Particularly notable is the model's performance on 'Anger', where it achieves an exceptional precision rate of 100%, reflecting its precision in predicting this specific emotion. Alongside a recall rate of 92.3%, SigWavNet effectively identifies the majority of 'Anger' instances, leading to a harmoniously balanced F1-score of 96% (refer to the paper). The confusion matrix in SigWavNet confusion matrix figure describes class-wise test results on EMO-DB.  
-</p>
-
-SigWavNet confusion matrix on EMO-DB            | 
-:-----------------------------------------------------------------:|
-![sigwavnet_cfm_emodb](figures/emodb_cfm.png)  |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -249,7 +247,7 @@ to the authors. See `LICENSE.md` for the full license text.
 
 Alaa Nfissi - [@LinkedIn](https://www.linkedin.com/in/alaa-nfissi/) - alaa.nfissi@mail.concordia.ca
 
-Github Link: [https://github.com/alaaNfissi/SigWavNet-Learning-Multiresolution-Signal-Wavelet-Network-for-Speech-Emotion-Recognition](https://github.com/alaaNfissi/SigWavNet-Learning-Multiresolution-Signal-Wavelet-Network-for-Speech-Emotion-Recognition)
+Github Link: [https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment](https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -270,7 +268,7 @@ Github Link: [https://github.com/alaaNfissi/SigWavNet-Learning-Multiresolution-S
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[model-architecture]: figures/Aggregated_SigWavNet_V.png
+[model-architecture]: figures/SigWavNet_ANNPR_small.png
 
 
 [anaconda.com]: https://anaconda.org/conda-forge/mlconjug/badges/version.svg
