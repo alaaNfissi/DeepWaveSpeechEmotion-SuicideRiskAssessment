@@ -4,24 +4,24 @@
 <br />
 
 <div align="center">
-  <a href="https://github.com/alaaNfissi/SigWavNet-Learning-Multiresolution-Signal-Wavelet-Network-for-Speech-Emotion-Recognition">
+  <a href="https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment">
     <img src="figures/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">SigWavNet: Learning Multiresolution Signal Wavelet Network for Speech Emotion Recognition</h3>
+  <h3 align="center">Deep Learning Multiresolution Wavelet Transform for Speech Emotional State Assessment of High-Risk Suicide Callers</h3>
 
   <p align="center">
-    This paper has been submitted for publication in IEEE Transactions on Affective Computing.
+    This paper has been submitted for publication in The 11th IAPR TC3 Workshop on Artificial Neural Networks in Pattern Recognition.
     <br />
    </p>
-   <!-- <a href="https://github.com/alaaNfissi/SigWavNet-Learning-Multiresolution-Signal-Wavelet-Network-for-Speech-Emotion-Recognition"><strong>Explore the docs »</strong></a> -->
+   <!-- <a href="https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment"><strong>Explore the docs »</strong></a> -->
 </div>
    
 
   
 <div align="center">
 
-[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](https://github.com/alaaNfissi/SigWavNet-Learning-Multiresolution-Signal-Wavelet-Network-for-Speech-Emotion-Recognition/#readme "Go to project documentation")
+[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment/#readme "Go to project documentation")
 
 </div>  
 
@@ -29,9 +29,9 @@
 <div align="center">
     <p align="center">
     ·
-    <a href="https://github.com/alaaNfissi/SigWavNet-Learning-Multiresolution-Signal-Wavelet-Network-for-Speech-Emotion-Recognition/issues">Report Bug</a>
+    <a href="https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment/issues">Report Bug</a>
     ·
-    <a href="https://github.com/alaaNfissi/SigWavNet-Learning-Multiresolution-Signal-Wavelet-Network-for-Speech-Emotion-Recognition/issues">Request Feature</a>
+    <a href="https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment/issues">Request Feature</a>
   </p>
 </div>
 
@@ -54,8 +54,8 @@
     <li>
       <a href="#results">Results</a>
       <ul>
+        <li><a href="#on-crise-nspl-dataset">On CRISE-NSPL dataset</a></li>
         <li><a href="#on-iemocap-dataset">On IEMOCAP dataset</a></li>
-        <li><a href="#on-tess-dataset">On EMO-DB dataset</a></li>
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
