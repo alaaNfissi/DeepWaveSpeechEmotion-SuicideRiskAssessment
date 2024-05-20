@@ -71,6 +71,13 @@
 <p align="justify"> This study introduces an end-to-end (E2E) deep learning framework for speech emotion recognition (SER), aimed at enhancing the early detection of suicidal ideation and reducing suicide risks. Despite progress, SER still faces challenges like system complexity, feature distinctiveness, and noise interference. Our approach uses a learnable architecture for fast discrete wavelet transform (FDWT) multi-resolution analysis, directly extracting features from raw speech waveforms. It combines a 1D dilated convolutional neural network (1D dilated CNN) with spatial attention (SA) and bidirectional gated recurrent units (Bi-GRU) with temporal attention (TA) to capture spatial and temporal characteristics. The framework handles variable-length speech without segmentation, simplifying preprocessing. It introduces a learnable architecture for wavelet bases and coefficient denoising with a learnable asymmetric hard thresholding (LAHT) activation function, enhancing noise resilience and feature distinctiveness. We validate our model on the NSPL-CRISE dataset, which includes recordings from individuals with psychological challenges and potential suicidal thoughts. Our results show significant performance improvements over state-of-the-art SER methods, demonstrating the effectiveness of our multi-resolution deep learning framework in identifying emotional states related to suicide risk.</p>
 <div align="center">
   
+![sub-model-architecture][sub-model-architecture]
+  
+*Architecture of a 1D Dilated CNN with Spatial Attention, Bi-GRU, and Temporal Attention*
+  
+</div>
+<div align="center">
+  
 ![model-architecture][model-architecture]
   
 *SigWavNet General Architecture*
@@ -269,6 +276,7 @@ Github Link: [https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAss
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [model-architecture]: figures/SigWavNet_ANNPR_small.png
+[sub-model-architecture]: figures/SigWavNet_1D_CNN_SA_BiGRU_TA_small_1.png
 
 
 [anaconda.com]: https://anaconda.org/conda-forge/mlconjug/badges/version.svg
