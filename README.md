@@ -249,17 +249,6 @@ to the authors. See `LICENSE.md` for the full license text.
 
 
 
-<!-- CONTACT -->
-## Contact
-
-Alaa Nfissi - [@LinkedIn](https://www.linkedin.com/in/alaa-nfissi/) - alaa.nfissi@mail.concordia.ca
-
-Github Link: [https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment](https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
