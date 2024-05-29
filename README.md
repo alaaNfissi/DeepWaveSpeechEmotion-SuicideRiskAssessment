@@ -8,7 +8,7 @@
     <img src="figures/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Deep Learning Multiresolution Wavelet Transform for Speech Emotional State Assessment of High-Risk Suicide Callers</h3>
+  <h3 align="center">Deep Multiresolution Wavelet Transform for Speech Emotion Assessment of High-Risk Suicide Callers</h3>
 
   <p align="center">
     This paper has been submitted for publication in The 11th IAPR TC3 Workshop on Artificial Neural Networks in Pattern Recognition.
@@ -68,7 +68,7 @@
 <!-- ABSTRACT -->
 ## Abstract
 
-<p align="justify"> This study introduces an end-to-end (E2E) deep learning framework for speech emotion recognition (SER), aimed at enhancing the early detection of suicidal ideation and reducing suicide risks. Despite progress, SER still faces challenges like system complexity, feature distinctiveness, and noise interference. Our approach uses a learnable architecture for fast discrete wavelet transform (FDWT) multi-resolution analysis, directly extracting features from raw speech waveforms. It combines a 1D dilated convolutional neural network (1D dilated CNN) with spatial attention (SA) and bidirectional gated recurrent units (Bi-GRU) with temporal attention (TA) to capture spatial and temporal characteristics. The framework handles variable-length speech without segmentation, simplifying preprocessing. It introduces a learnable architecture for wavelet bases and coefficient denoising with a learnable asymmetric hard thresholding (LAHT) activation function, enhancing noise resilience and feature distinctiveness. We validate our model on the NSPL-CRISE dataset, which includes recordings from individuals with psychological challenges and potential suicidal thoughts. Our results show significant performance improvements over state-of-the-art SER methods, demonstrating the effectiveness of our multi-resolution deep learning framework in identifying emotional states related to suicide risk.</p>
+<p align="justify"> This paper introduces an end-to-end (E2E) deep learning framework for speech emotion recognition (SER), aimed at assisting suicide helpline counselors during their interventions. Despite progress, SER still faces challenges such as system complexity, feature distinctiveness, and noise interference. Our approach uses a learnable architecture for fast discrete wavelet transform (FDWT) multi-resolution analysis, for directly extracting features from raw speech waveforms. It combines a 1D dilated convolutional neural network (1D dilated CNN) with spatial attention (SA) and bidirectional gated recurrent units (Bi-GRU) with temporal attention (TA) to capture spatial and temporal characteristics. The framework handles variable-length speech without segmentation, simplifying preprocessing. It introduces a learnable architecture for wavelet bases and coefficient denoising with a learnable asymmetric hard thresholding (LAHT) activation function, enhancing noise resilience and feature distinctiveness. We validate our model on the NSPL-CRISE dataset, which includes recordings from individuals with psychological challenges and potentially suicidal ideations. Our results show significant performance improvements over state-of-the-art SER methods, demonstrating the effectiveness of our multi-resolution deep learning framework in identifying emotional states related to suicide risk.</p>
 <div align="center">
   
 ![sub-model-architecture][sub-model-architecture]
