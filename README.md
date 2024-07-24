@@ -11,7 +11,7 @@
   <h3 align="center">Deep Multiresolution Wavelet Transform for Speech Emotion Assessment of High-Risk Suicide Callers</h3>
 
   <p align="center">
-    This paper has been submitted for publication in The 11th IAPR TC3 Workshop on Artificial Neural Networks in Pattern Recognition.
+    This paper has been accepted for publication in The 11th IAPR TC3 Workshop on Artificial Neural Networks in Pattern Recognition.
     <br />
    </p>
    <!-- <a href="https://github.com/alaaNfissi/DeepWaveSpeechEmotion-SuicideRiskAssessment"><strong>Explore the docs »</strong></a> -->
